@@ -22,6 +22,15 @@ var config = {
       test: /\.js$/,
       loaders: ['babel'],
       exclude: /node_modules/
+    }, {
+      test: /\.scss$/,
+      include: /src/,
+      loaders: [
+        'style-loader',
+        'css-loader',
+        'autoprefixer-loader?browsers=last 3 versions',
+        'sass-loader?outputStyle=expanded'
+      ]
     }]
   }
 };

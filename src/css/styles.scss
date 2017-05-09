@@ -1,0 +1,113 @@
+.navbar-default {
+  background-color: #3273dc;
+  border-color: #3273dc;
+}
+
+.navbar-default .navbar-brand {
+  color: #FFF;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #FFF;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #FFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #FFF;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #FFF;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+ color: #FFF;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #FFF;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #CCC;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #FFF;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #FFF;
+  }
+}
+
+.home-icon img {
+  margin: auto;
+}
+
+.icon {
+  padding-right: 6px;
+}
+
+.main-info {
+  padding: 50px 0;
+}
+.main-info ul li {
+  list-style-type: none;
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.box a, .box a:focus, .box a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #3273dc;
+  padding: 5px 0 10px 0;
+  color: white;
+  margin-top: 50px;
+}
+.footer-title {
+  font-size: 24px;
+}
+.footer a {
+  color: white;
+}
+.footer a:hover {
+  text-decoration: none;
+}
+.footer-links {
+  display: inline-block;
+}
+.footer .discord {
+  fill: #FFF;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer .divider {
+  padding: 0 10px;
+  display: inline-block;
+}
