@@ -4,7 +4,8 @@ COPY . /src
 
 WORKDIR /src
 
-RUN npm install
+RUN npm install \
+  && npm run build -p
 
 EXPOSE 8080
 

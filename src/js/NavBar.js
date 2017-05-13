@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Nav, NavItem, Navbar, NavDropdown, MenuItem } from 'react-bootstrap';
 
 class NavBar extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class NavBar extends React.Component {
             </NavDropdown>
           </Nav>
           <Nav pullRight>
-            <NavItem>Login</NavItem>
+            <NavItem href={this.props.server + "/auth/steam"}>Login</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

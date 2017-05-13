@@ -22,6 +22,6 @@ app.listen(port, function onAppListening(err) {
   if (err) {
     console.error(err);
   } else {
-    console.log("Webpack development server listening on port %s", port);
+    console.log('Webpack development server listening on port %s', port);
   }
 });
