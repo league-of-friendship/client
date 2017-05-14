@@ -1,12 +1,21 @@
 var path = require('path');
 var webpack = require('webpack');
 
-var config = {
-  devtool: 'source-map',
-  entry: [
+var env = process.env.NODE_ENV === 'production' ? 'production' : 'development';
+
+var entries = {
+  'production': [
+    './src/app.js',
+  ],
+  'development': [
     './src/app.js',
     'webpack-hot-middleware/client'
   ],
+}
+
+var config = {
+  devtool: 'source-map',
+  entry: entries[env],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -15,7 +24,13 @@ var config = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'SERVER_URL': JSON.stringify(process.env.SERVER_URL),
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }
+    })
   ],
   module: {
     loaders: [{

@@ -7,10 +7,10 @@ import Footer from './js/Footer';
 
 import './css/styles.scss';
 
-process.env.SERVER_URL = '//' + (process.env.SERVER_URL || 'localhost:8000')
+var serverUrl = '//' + (process.env.SERVER_URL || 'localhost:8000')
 
 ReactDOM.render(
-  <NavBar server={process.env.SERVER_URL} />,
+  <NavBar server={serverUrl} />,
   document.querySelector('.navbar')
 );
 

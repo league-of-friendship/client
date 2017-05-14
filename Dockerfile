@@ -4,11 +4,20 @@ COPY . /src
 
 WORKDIR /src
 
+ARG SERVER_URL
+
+ARG NODE_ENV
+
+RUN echo "$SERVER_URL" && echo "$NODE_ENV"
+
 RUN npm install \
-  && npm run build -p
+  && npm install --dev \
+  && npm run build-production
+
+RUN npm install http-server -g
 
 EXPOSE 8080
 
-ENTRYPOINT ["npm"]
+ENTRYPOINT ["http-server"]
 
-CMD ["start"]
+CMD ["/src"]
