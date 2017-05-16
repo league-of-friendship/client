@@ -1,20 +1,21 @@
 FROM library/node:latest
 
-COPY . /src
-
-WORKDIR /src
-
 ARG SERVER_URL
 
 ARG NODE_ENV
 
-RUN echo "$SERVER_URL" && echo "$NODE_ENV"
-
-RUN npm install \
-  && npm install --dev \
-  && npm run build-production
+WORKDIR /src
 
 RUN npm install http-server -g
+
+COPY package.json /src/package.json
+
+RUN npm install \
+  && npm install --dev
+
+COPY . /src
+
+RUN npm run build-production
 
 EXPOSE 8080
 
